@@ -1,4 +1,4 @@
-# Ducca - Ducca's Personal Website
+# Clock
 
 Inspired by [this man](https://www.youtube.com/watch?v=weZFfrjF-k4&ab_channel=OnlineTutorials).
 
