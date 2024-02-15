@@ -1,11 +1,20 @@
-var timer = 5;
-var counting = setInterval(function()
+function TurnOnClock()
 {
-    timer -= 1;
-    document.getElementById("countdown").innerHTML = timer;
-    if (timer <= 0)
-    {
-        clearInterval(timer);
-        window.location.href = "https://caodoc.is-a.dev";
-    }
-}, 1000);
+    const NewDate = new Date();
+    
+    const Hour = document.getElementById("hr");
+    const Min = document.getElementById("mn");
+    const Sec = document.getElementById("sc");
+    
+    Hour.style.transform = `rotateZ(${NewDate.getHours() * 30 + NewDate.getMinutes() / 2}deg)`;
+    Min.style.transform = `rotateZ(${NewDate.getMinutes() * 6}deg)`;
+    Sec.style.transform = `rotateZ(${NewDate.getSeconds() * 6}deg)`;
+}
+
+TurnOnClock();
+setInterval(TurnOnClock,1000);
+
+document.getElementById("github").addEventListener("click", () =>
+{
+    window.open("https://github.com/caodoc", "_blank");
+});

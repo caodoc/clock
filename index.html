@@ -4,19 +4,35 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="caodoc"/>
+        <meta property="og:description" content="A front-end clock."/>
+        <meta property="og:image" content="https://raw.githubusercontent.com/caodoc/caodoc.github.io/main/assets/default.png"/>
+        <meta property="og:url" content="https://caodoc.is-a.dev"/>
 
-        <title> caodoc </title>
+        <title> clock &ndash; caodoc </title>
 
-		<link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/caodoc/caodoc.github.io/main/assets/web_logo.png" width="64px" height="64px"/>
+		<link rel="stylesheet" media="(min-width: 350px)" type="text/css" href="./medium.css"/>
+        <link rel="stylesheet" media="(max-width: 350px)" type="text/css" href="./small.css"/>
     </head>
 
     <body>
         <div id="container">
-            <div>
-                <p> This page has been moved to <text id="link">caodoc.is-a.dev</text> </p>
-                <p> You will be directed in <text id="countdown"></text> seconds. </p>
+            <div id="warning"> Please use a bigger screen. </div>
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
             </div>
+            <div id="github"></div>
         </div>
+        <script src="./script.js"></script>
     </body>
-    <script src="./script.js"></script>
 </html>
